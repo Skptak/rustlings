@@ -10,7 +10,7 @@
 
 fn vec_loop(mut v: Vec<i32>) -> Vec<i32> {
     for element in v.iter_mut() {
-        element = element.clone() * 2;
+        *element = *element * 2;
     }
 
     // At this point, `v` should be equal to [4, 8, 12, 16, 20].
